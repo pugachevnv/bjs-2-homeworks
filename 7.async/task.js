@@ -24,10 +24,10 @@ class AlarmClock {
     }
 
     getCurrentFormattedTime(){
-        const currentTime = new Date;
-        const currentHours = currentTime.getHours();
-        const currentMinutes = currentTime.getMinutes();
-        return currentHours + ':' + currentMinutes;
+        return new Date().toLocaleTimeString("ru-Ru", {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
     }
 
     start(){
